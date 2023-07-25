@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<link href="./reset/reset.css" rel="stylesheet">
+		<link href="./index.css" rel="stylesheet"> 
+	</head>
+	<body>
+		<header>
+			<img src="./img/js.png">
+			<h1>Lista de exercicios top D+</h1>
+		</header>
+		<main>
+			<div class="menu-esquerdo">
+				<ul>
+					<li class="btn-exercicio" data-numero="1">
+						Exercício 01
+					</li>
+					<li class="btn-exercicio" data-numero="9">
+						Exercício 09
+					</li>
+					<li class="btn-exercicio" data-numero="10">
+						Exercício 10
+					</li >
+					<li class="btn-exercicio" data-numero="14">
+						Exercício 14
+					</li>
+					<li class="btn-exercicio" data-numero="17">
+						Exercício 17
+					</li>
+					<li class="btn-exercicio" data-numero="19">
+						Exercício 19
+					</li>
+					<li class="btn-exercicio" data-numero="21">
+						Exercício 21
+					</li>
+					<li class="btn-exercicio" data-numero="22">
+						Exercício 22
+					</li>
+					<li class="btn-exercicio" data-numero="24">
+						Exercício 24
+					</li>
+				</ul>
+			</div>
+			<div id="espaco-execucao"class="espaco-execucao">
+				<div id="area-codigo" class="area-codigo">
+					<div class="container-boasvindas">
+						<h1>Seja bem vindo à lista de exercícios do Kaik</h1>
+						<p>Essa é a lista 1 de algoritmos 2 para a aep 3. A lista possui alguns dos exercícios que julguei mais desafiadores e interessantes
+						   para serem feitos. 
+						</p>
+						<h2>Clique em um exercício na lista à esquerda para executá-lo</h2>
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		
+		<script src="./js/comandos.js"></script> 
+		<script src="./js/1.js"></script>
+		<script src="./js/9.js"></script>
+		<script src="./js/10.js"></script>
+		<script src="./js/14.js"></script>
+		<script src="./js/17.js"></script>
+		<script src="./js/19.js"></script>
+		<script src="./js/21.js"></script>
+		<script src="./js/22.js"></script>
+		<script src="./js/24.js"></script>
+		<script>
+			
+			const elementos = document.querySelectorAll(".btn-exercicio");
+			var data;
+			var podeClicar = true;
+	
+			Array.from(elementos).forEach((el) => {
+				el.addEventListener("click", () => {
+					if (podeClicar) {
+						podeClicar = false;
+						data = el.dataset.numero;
+						
+						switch(data) {
+							case "1":
+								executar1();
+								break;
+							case "9":
+								executar9();
+								break;
+							case "10":
+								executar10();
+								break;
+							case "14":
+								executar14();
+								break;
+							case "17":
+								executar17();
+								break;
+							case "19":
+								executar19();
+								break;
+							case "21":
+								executar21();
+								break;
+							case "22":
+								executar22();
+								break;
+							case "24":
+								executar24();
+								break;
+						}
+						
+						setTimeout(function() {
+							podeClicar = true;
+						}, 200);
+					}
+				});
+			});
+			
+		</script>
+	</body>
+</html>
